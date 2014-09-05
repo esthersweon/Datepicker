@@ -27,7 +27,8 @@
 	};
 
 	Display.prototype.renderMonth = function(){
-		var monthDisplay = $('#monthDisplay');
-		var month = new datePicker.Month(monthDisplay);
+		var $monthDisplay = $('#monthDisplay');
+		$monthDisplay.html("");
+		var month = new datePicker.Month($monthDisplay);
 	};
 })(this);
