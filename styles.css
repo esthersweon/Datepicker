@@ -1,0 +1,39 @@
+#input {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#header {
+	border:1px solid black;
+	background-color:lightgray;
+	height:20px;
+}
+
+#calendar {
+	margin-top:20px;
+	border:1px solid black; 
+	border-radius: 5px;
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center
+}
+#back, #forward {
+	width:25%;
+	float:left;
+}
+#monthYear {
+	width:50%;
+	float:left;
+}
+
+#monthDisplay {
+	clear:both;
+}
+
+#weekHeading {
+	background-color:gray;
+	height:20px;
+}
