@@ -11,10 +11,12 @@
 
 	Day.prototype.render = function(){
 		var $day = $(document.createElement('div'));
+
 		$day.attr("class", "day");
 		$day.attr("id", this.label);
 		$($day[0]).html(this.label);
 		$(this.$el).append($day[0]);
+
 	};
 
 	Day.prototype.clickListener = function(){

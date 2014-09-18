@@ -23,6 +23,7 @@
 	width:25%;
 	float:left;
 }
+
 #month {
 	width:25%;
 	float:left;
@@ -34,7 +35,6 @@
 }
 
 #monthDisplay {
-	/*padding-top:30px;*/
 	width:210px;
 	height:285px;
 	background-color:lightsalmon;
