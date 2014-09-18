@@ -7,37 +7,75 @@
 
 		<script src="./day.js"></script>
 		<script src="./month.js"></script>
-		<script src="./display.js"></script>
 	</head>
 
 	<body>
-		<div id="input">
-			<input id="dateInput" type="text">
-		</div>
-		
-		<div id="calendar">
-			<div id="header">
-				<div id="back"><<</div>
-				<div id="monthYear"></div>
-				<div id="forward">>></div>
+		<div id="content">
+			<div id="input">
+				<input id="dateInput" type="text">
 			</div>
-			<div id="monthDisplay">
+
+			<div id="calendar">
+				<div id="header">
+					<div id="back"><<</div>
+					<div id="month"></div>
+					<div id="year"></div>
+					<div id="forward">>></div>
+				</div>
+				<div id="monthDisplay">
+				</div>
 			</div>
 		</div>
 
 		<script type="text/javascript">
-			var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-			var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
 			$("#calendar").hide();
 
 			$('#dateInput').focus(function(){
-				var display = new datePicker.Display();
-			})
+				$("#calendar").show();
+				var display = new datePicker.Month();
+			});
 
-			$('#dateInput').blur(function(){
-				$("#calendar").hide();
-			})
+			// $('#content').click(function(){
+			// 	$("#calendar").hide();
+			// });
+
+			$('#back').click(function(){
+				var currentMonth = Number($("#month").attr("class")),
+					currentYear = Number($("#year").html());
+
+				if (currentMonth!=1){
+					var monthToDisplay = currentMonth - 1, 
+						yearToDisplay = currentYear;
+				} else {
+					var monthToDisplay = 12, 
+						yearToDisplay = currentYear - 1;
+				}
+				
+				$("#month").html("");
+				$("#year").html("");
+				$("#monthDisplay").empty();
+
+				var display = new datePicker.Month(yearToDisplay, monthToDisplay);
+			});
+
+			$('#forward').click(function(){
+				var currentMonth = Number($("#month").attr("class")),
+					currentYear = Number($("#year").html());
+
+				if (currentMonth!=12){
+					var monthToDisplay = currentMonth + 1, 
+						yearToDisplay = currentYear;
+				} else {
+					var monthToDisplay = 1, 
+						yearToDisplay = currentYear + 1;
+				}
+				
+				$("#month").html("");
+				$("#year").html("");
+				$("#monthDisplay").empty();
+
+				var display = new datePicker.Month(yearToDisplay, monthToDisplay);
+			});
 		</script>
 	</body>
 <html>

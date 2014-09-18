@@ -1,4 +1,4 @@
 Datepicker
 ==========
 
-Coding a jQuery UI Datepicker using just Javascript/jQuery.
+Coding a jQuery UI Datepicker using Javascript/jQuery.

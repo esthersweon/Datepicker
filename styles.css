@@ -6,16 +6,15 @@
 }
 
 #header {
-	border:1px solid black;
-	background-color:lightgray;
+	background-color:salmon;
 	height:20px;
+	padding:10px;
 }
 
 #calendar {
 	margin-top:20px;
-	border:1px solid black; 
 	border-radius: 5px;
-	width:50%;
+	width:210px;
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center
@@ -24,16 +23,41 @@
 	width:25%;
 	float:left;
 }
-#monthYear {
-	width:50%;
+#month {
+	width:25%;
+	float:left;
+}
+
+#year {
+	width:25%;
 	float:left;
 }
 
 #monthDisplay {
+	/*padding-top:30px;*/
+	width:210px;
+	height:285px;
+	background-color:lightsalmon;
 	clear:both;
 }
 
-#weekHeading {
-	background-color:gray;
-	height:20px;
+#weekHeading .day {
+	font-size: 15px !important;
+	padding-top:15px;
+	background-color:lightyellow;
+}
+
+.week{
+	width:210px;
+	height:30px;
+}
+
+.day{
+	width:30px;
+	height:30px;
+	padding-top:10px;
+	float:left;
+	text-align:center;
+	font-size:10px;
+	background-color: lightsalmon;
 }
